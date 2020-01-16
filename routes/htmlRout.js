@@ -13,10 +13,15 @@ module.exports = function(app) {
     app.get("/reserve", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/reserve.html"));
     });
-    
+
   // nothing is found move to homepage
-    app.get("*", function(req, res) {
+    app.get("/", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/reserve.html"));
     });
   };
+
+  var path = require("path");
+
+
+
   
